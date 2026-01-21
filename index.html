@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishShield | AI Detection Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PhishShield AI</h1>
+            <p>Advanced Multi-Layer Phishing Analysis</p>
+        </header>
+
+        <main>
+            <section class="input-area">
+                <textarea id="emailContent" placeholder="Paste the email body or message here..."></textarea>
+                <input type="text" id="urlInput" placeholder="Enter any URLs found in the message (optional)">
+                <button onclick="analyzeContent()">Run Security Audit</button>
+            </section>
+
+            <section id="results" class="hidden">
+                <div class="score-card">
+                    <div class="risk-circle">
+                        <span id="riskScore">0</span>
+                        <small>Risk Score</small>
+                    </div>
+                    <div class="classification">
+                        <h2 id="verdict">Analyzing...</h2>
+                    </div>
+                </div>
+
+                <div class="analysis-grid">
+                    <div class="card">
+                        <h3>NLP & Sentiment</h3>
+                        <p id="nlpAnalysis">Pending...</p>
+                    </div>
+                    <div class="card">
+                        <h3>URL & Metadata</h3>
+                        <p id="urlAnalysis">Pending...</p>
+                    </div>
+                </div>
+
+                <div class="recommendation">
+                    <h3>Safety Recommendation</h3>
+                    <p id="safetyTip"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
